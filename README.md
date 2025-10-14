@@ -12,14 +12,11 @@ The SciNUP dataset thus serves as a valuable resource for fostering future resea
 
 ## SciNUP Dataset
 
-The SciNUP dataset contains information about 1000 researchers, and for each author, it stores the following components:
+The SciNUP dataset contains NL profiles of 1000 researchers for scientific literature recommendation with the following components:
 
-- NL user interest profiles
-- Ground truth items
-- Candidate items set
-- NL profile breadth category (Narrow, Medium, or Broad)
-
-These components are distributed in three files: NL profiles and candidate items are under ([data/SciNUP/dataset.jsonl](), ground truth items are under [data/SciNUP/sampled_users.jsonl](), and profile breadth attribute is under [data/SciNUP/breadth_classification.tsv](). 
+- NL profiles and candidate items: [data/SciNUP/dataset.jsonl]()
+- Ground truth items: [data/SciNUP/sampled_users.jsonl]()
+- NL profile breadth categorization: [data/SciNUP/breadth_classification.tsv]()
 
 | Dataset | #Authors | #Authored papers (min / median / max) | #Candidate items per author | #Ground truth papers per author (min / median / max) | Profile length (words) | #Narrow / Medium / Broad NL profiles | 
 |------------|--------|--------|--------|--------|--------|--------|
