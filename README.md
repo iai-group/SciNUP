@@ -31,6 +31,8 @@ Details about dataset creation steps can be found under [data/SciNUP/README.md](
 
 We benchmarked Sparse (BM25, RM3), Dense (kNN-SciBERT, BGE-large, BGE-v2-M3, BGE-v2-MiniCPM) and LLM-reranking (PRP-Llama-3-8B, PRP-Llama-3.3-70B, PRP-GPT-4o-mini) methods on our dataset. Additionally, we evaluated ensemble model using reciprocal rank fusion to fuse best-performing results in each category (RM3, BGE-v2-MiniCPM and PRP-GPT-4o-mini). 
 
+The table below describes evaluation results. Highest scores are boldfaced. Statistically significant improvements over BM25 and RM3 are indicated by † and ‡, respectively (paired t-test p < 0.05).
+
 | Model                  | R@100   | MAP        | MRR        | NDCG@10   | Runfile
 |------------------------|---------|------------|------------|-----------|-----------|
 | BM25                   | 0.3491  | 0.1148     | 0.4661     | 0.2869    | [data/retrieval_results/bm25.trec]() |
@@ -48,7 +50,7 @@ Implementation of these methods can be found under [src/models](). The main scri
 
 ## Evaluation
 
-To run the evaluation and generate the numbers shown in the table above, `trec_eval` library is used and it can be done by the following command:
+The `trec_eval` library is used to run the evaluation and generate the numbers shown in the table above using the following command:
 
 ```
 trec_eval -m recall.100 -m map -m recip_rank -m ndcg_cut.10 data/retrieval_results/ground_truth_qrels.txt PATH_TO_DESIRED_RUNFILE
