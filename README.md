@@ -45,9 +45,7 @@ The table below describes evaluation results. Highest scores are boldfaced. Stat
 
 Implementation of these methods can be found under [src/models](). The main script to run retrieval including the sample usage is under [src/run_retrieval.py]
 
-## Evaluation
-
-The `trec_eval` library is used to run the evaluation and generate the numbers shown in the table above using the following command:
+The numbers shown in the table above are generated using `trec_eval`:
 
 ```
 trec_eval -m recall.100 -m map -m recip_rank -m ndcg_cut.10 data/retrieval_results/ground_truth_qrels.txt PATH_TO_DESIRED_RUNFILE
