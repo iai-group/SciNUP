@@ -18,9 +18,14 @@ The SciNUP dataset contains NL profiles of 1000 researchers for scientific liter
 - Ground truth items: [data/SciNUP/sampled_users.jsonl]()
 - NL profile breadth categorization: [data/SciNUP/breadth_classification.tsv]()
 
-| Dataset | #Authors | #Authored papers (min / median / max) | #Candidate items per author | #Ground truth papers per author (min / median / max) | Profile length (words) | #Narrow / Medium / Broad NL profiles | 
-|------------|--------|--------|--------|--------|--------|--------|
-| SciNUP | 1,000 | 10 / 20 / 260 | 1,000 | 1 / 27 / 438 | 117 ± 55 | 679 / 256 / 65 |
+| Attribute | SciNUP |
+|-----------|--------|
+| #Authors | 1,000 |
+| #Authored papers (min / median / max) | 10 / 20 / 260 |
+| #Candidate items per author | 1,000 |
+| #Ground truth papers per author (min / median / max) | 1 / 27 / 438 |
+| Profile length (words) | 117 ± 55 |
+| #Narrow / Medium / Broad NL profiles | 679 / 256 / 65 |
 
 Details about dataset creation steps can be found under [data/SciNUP/README.md]()
 
@@ -28,19 +33,18 @@ Details about dataset creation steps can be found under [data/SciNUP/README.md](
 
 We benchmarked Sparse (BM25, RM3), Dense (kNN-SciBERT, BGE-large, BGE-v2-M3, BGE-v2-MiniCPM) and LLM-reranking (PRP-Llama-3-8B, PRP-Llama-3.3-70B, PRP-GPT-4o-mini) methods on our dataset. Additionally, we evaluated ensemble model using reciprocal rank fusion to fuse best-performing results in each category (RM3, BGE-v2-MiniCPM and PRP-GPT-4o-mini). 
 
-The table below describes evaluation results. Highest scores are boldfaced. Statistically significant improvements over BM25 and RM3 are indicated by † and ‡, respectively (paired t-test p < 0.05).
 
 | Model                  | R@100   | MAP        | MRR        | NDCG@10   | Runfile
 |------------------------|---------|------------|------------|-----------|-----------|
 | BM25                   | 0.3491  | 0.1148     | 0.4661     | 0.2869    | [data/retrieval_results/bm25.trec]() |
-| RM3                    | 0.3570  | 0.1391†    | 0.5147†    | 0.3251†   | [data/retrieval_results/rm3.trec]() |
+| RM3                    | 0.3570  | 0.1391     | 0.5147     | 0.3251    | [data/retrieval_results/rm3.trec]() |
 | kNN-SciBERT            | 0.1480  | 0.0232     | 0.2182     | 0.1019    | [data/retrieval_results/knn_scibert.trec]()  |
 | BGE-Large              | 0.2826  | 0.0783     | 0.3666     | 0.2072    | [data/retrieval_results/bge_large.trec]()  |
 | BGE-v2-M3              | 0.3472  | 0.1152     | 0.4633     | 0.2763    | [data/retrieval_results/bge_v2_m3.trec]()  |
-| BGE-v2-MiniCPM         | **0.4203**†‡ | **0.1673**†‡ | **0.5393**† | 0.3541†‡ | [data/retrieval_results/bge_v2_minicpm.trec]()  |
+| BGE-v2-MiniCPM         | **0.4203** | 0.1673     | 0.5393     | 0.3541    | [data/retrieval_results/bge_v2_minicpm.trec]()  |
 | PRP-Llama-3 (8B)       | 0.3491  | 0.1165     | 0.4774     | 0.2925    | [data/retrieval_results/prp_llama_8b.trec]()  |
-| PRP-Llama-3.3 (70B)    | 0.3491  | 0.1423†    | 0.5378†    | 0.3541†‡ | [data/retrieval_results/prp_llama_70b.trec]()  |
-| PRP-GPT-4o-mini        | 0.3491  | 0.1405†    | 0.5297†    | **0.3542**†‡ | [data/retrieval_results/prp_gpt.trec]()  |
+| PRP-Llama-3.3 (70B)    | 0.3491  | 0.1423     | 0.5378     | 0.3541    | [data/retrieval_results/prp_llama_70b.trec]()  |
+| PRP-GPT-4o-mini        | 0.3491  | 0.1405     | 0.5297     |   0.3542  | [data/retrieval_results/prp_gpt.trec]()  |
 | Ensemble               | 0.4136  | **0.2163** | **0.6333** | **0.4481** | [data/retrieval_results/rrf_fused.trec]()  |
 
 Implementation of these methods can be found under [src/models](). The main script to run retrieval including the sample usage is under [src/run_retrieval.py]
