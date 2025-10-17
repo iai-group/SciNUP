@@ -19,18 +19,18 @@ Four main steps lead to SciNUP dataset:
         - [arxiv-metadata.csv](../preprocessed/arxiv-metadata.csv) -  contains 472,310 rows with columns: *['article_id', 'submitter', 'authors', 'title', 'comments', 'journal-ref', 'doi',
             'report-no', 'categories', 'license', 'abstract', 'versions',
             'update_date', 'authors_parsed']*
-        - [citations.csv](../preprocessed/citations.csv) - contains 734,454 rows with columns: *['article_id', 'references', 'num_references']*
-        - [authors.csv](../preprocessed/authors.csv) - contains 243,985 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
-        - [candidate_users.csv](../preprocessed/candidate_users.csv) - a subset of [authors.csv](../preprocessed/authors.csv) with users having >= *n_minimum_papers=5* papers. Contains 90,902 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
+        - [citations.csv](../preprocessed/) - contains 734,454 rows with columns: *['article_id', 'references', 'num_references']*
+        - [authors.csv](../preprocessed/) - contains 243,985 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
+        - [candidate_users.csv](../preprocessed/) - a subset of [authors.csv](../preprocessed/) with users having >= *n_minimum_papers=5* papers. Contains 90,902 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
 
 ## 2. Sampling authors
 
   - input:
-    + [data/preprocessed/candidate_users.csv](../preprocessed/candidate_users.csv)
-    + [data/preprocessed/arxiv-metadata.csv](../preprocessed/arxiv-metadata.csv)
-    + [data/preprocessed/citations.csv](../preprocessed/citations.csv)
+    + [data/preprocessed/candidate_users.csv](../preprocessed)
+    + [data/preprocessed/arxiv-metadata.csv](../preprocessed)
+    + [data/preprocessed/citations.csv](../preprocessed)
   - output:
-    + [data/SciNUP/sampled_users.jsonl](sampled_users.jsonl) - contains the following four fields: *author_id, author_name, nl_profile_input, ground_truth_items*.
+    + [data/SciNUP/sampled_users.jsonl](.) - contains the following four fields: *author_id, author_name, nl_profile_input, ground_truth_items*.
 
 [scripts/sample_users.py](../../scripts/sample_users.py) samples 1000 users, transforms them into Author objects ([src/components/author.py](../../src/components/author.py)) and saves as a JSONL file.
 
@@ -43,11 +43,11 @@ Ground truth items are already extracted and stored in the sampling step. Remain
 
 
   - input:
-    + [data/preprocessed/candidate_users.csv](../preprocessed/candidate_users.csv)
-    + [data/preprocessed/arxiv-metadata.csv](../preprocessed/arxiv-metadata.csv)
-    + [data/SciNUP/sampled_users.jsonl](sampled_users.jsonl)
+    + [data/preprocessed/candidate_users.csv](../preprocessed/)
+    + [data/preprocessed/arxiv-metadata.csv](../preprocessed/)
+    + [data/SciNUP/sampled_users.jsonl](.)
   - output:
-    + [data/SciNUP/dataset.jsonl](dataset.jsonl)
+    + [data/SciNUP/dataset.jsonl](.)
 
 [scripts/generate_dataset.py](../../scripts/generate_dataset.py) generates a dataset that contains NL profiles and candidate item sets for the 1000 sampled users.
 
