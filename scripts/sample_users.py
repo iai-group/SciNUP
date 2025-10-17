@@ -5,8 +5,8 @@ import ast
 
 import pandas as pd
 
-from SciNUP.components.article import Article, ReferencedArticles
-from SciNUP.components.author import Author
+from src.components.article import Article, ReferencedArticles
+from src.components.author import Author
 
 # Constants for file paths
 CANDIDATE_USERS_CSV_PATH = "data/preprocessed/candidate_users.csv"

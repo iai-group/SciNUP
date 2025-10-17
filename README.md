@@ -47,7 +47,7 @@ We benchmarked Sparse (BM25, RM3), Dense (kNN-SciBERT, BGE-large, BGE-v2-M3, BGE
 | PRP-GPT-4o-mini        | 0.3491  | 0.1405     | 0.5297     |   0.3542  | [data/retrieval_results/prp_gpt.trec]()  |
 | Ensemble               | 0.4136  | **0.2163** | **0.6333** | **0.4481** | [data/retrieval_results/rrf_fused.trec]()  |
 
-Implementation of these methods can be found under [src/models](). The main script to run retrieval including the sample usage is under [src/run_retrieval.py]
+Implementation of these methods can be found under [SciNUP/models]() and [scripts/](). The main script to run retrieval including the sample usage is under [scripts/run_retrieval.py]
 
 The numbers shown in the table above are generated using `trec_eval`:
 
@@ -65,4 +65,4 @@ TBD
 
 ## Contact
 
-Should you have any questions, please contact `Mariam Arustashvili` at `mariam.arustashvili`[AT]uis.no (with [AT] replaced by @).
+Should you have any questions, please contact Mariam Arustashvili at mariam.arustashvili[AT]uis.no (with [AT] replaced by @).

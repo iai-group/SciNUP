@@ -5,7 +5,7 @@ import os
 from pyserini.encode import AutoQueryEncoder, TctColBertQueryEncoder
 from pyserini.search.faiss import FaissSearcher
 
-from SciNUP.models.retriever import RankedList, Retriever
+from src.models.retriever import RankedList, Retriever
 
 SCIBERT_ENCODER = "allenai/scibert_scivocab_uncased"
 

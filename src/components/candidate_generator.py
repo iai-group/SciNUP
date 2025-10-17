@@ -3,9 +3,9 @@
 import numpy as np
 import pandas as pd
 
-from SciNUP.components.article import Article
-from SciNUP.components.author import Author
 from scripts.sample_users import df_to_articles, get_referenced_articles_set
+from src.components.article import Article
+from src.components.author import Author
 
 # Number of candidate items to sample
 NUM_CANDIDATES = 1000

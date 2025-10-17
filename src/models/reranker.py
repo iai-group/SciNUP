@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 
-from SciNUP.models.retriever import RankedList
+from src.models.retriever import RankedList
 
 
 class Reranker(ABC):

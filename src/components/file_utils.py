@@ -4,7 +4,7 @@ format files."""
 import json
 from collections import defaultdict
 
-from SciNUP.models.retriever import RankedList
+from src.models.retriever import RankedList
 
 
 def parse_trec_file(file_path: str) -> dict[str, RankedList]:

@@ -11,11 +11,12 @@ from datetime import datetime
 
 import pandas as pd
 from openai import RateLimitError
-from SciNUP.components.article import Article
-from SciNUP.components.author import Author
-from SciNUP.components.candidate_generator import CandidateGenerator
-from SciNUP.components.profile_generator import ProfileGenerator
 from tqdm import tqdm
+
+from src.components.article import Article
+from src.components.author import Author
+from src.components.candidate_generator import CandidateGenerator
+from src.components.profile_generator import ProfileGenerator
 
 logging.basicConfig(
     level=logging.WARNING,

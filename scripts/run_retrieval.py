@@ -16,8 +16,8 @@ import json
 
 from tqdm import tqdm
 
-from SciNUP.models.dense_retriever import DenseRetriever
-from SciNUP.models.sparse_retriever import SparseRetriever
+from src.models.dense_retriever import DenseRetriever
+from src.models.sparse_retriever import SparseRetriever
 
 
 def load_profiles(dataset_path: str) -> list[dict]:

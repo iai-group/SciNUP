@@ -4,7 +4,7 @@ import os
 
 from pyserini.search.lucene import LuceneSearcher
 
-from SciNUP.models.retriever import RankedList, Retriever
+from src.models.retriever import RankedList, Retriever
 
 
 class SparseRetriever(Retriever):

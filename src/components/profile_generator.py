@@ -3,7 +3,7 @@ import os
 import litellm
 from dotenv import load_dotenv
 
-from SciNUP.components.article import Article
+from src.components.article import Article
 
 load_dotenv()
 

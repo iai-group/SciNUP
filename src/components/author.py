@@ -4,7 +4,7 @@ import json
 from dataclasses import dataclass
 from typing import Optional
 
-from SciNUP.components.article import Article
+from src.components.article import Article
 
 
 @dataclass

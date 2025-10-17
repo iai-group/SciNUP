@@ -18,8 +18,8 @@ export OPENROUTER_API_KEY='your-api-key-here'
 import argparse
 import os
 
-from SciNUP.components import file_utils
-from SciNUP.models.prp_reranker import PRPReranker
+from src.components import file_utils
+from src.models.prp_reranker import PRPReranker
 
 # --- Configuration ---
 DATASET_PATH = "data/SciNUP/dataset.jsonl"
