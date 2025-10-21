@@ -29,6 +29,7 @@ CANDIDATE_USERS_CSV_PATH = "data/preprocessed/candidate_users.csv"
 METADATA_CSV_PATH = "data/preprocessed/arxiv-metadata.csv"
 CITATIONS_CSV_PATH = "data/preprocessed/citations.csv"
 INPUT_JSONL_PATH = "data/SciNUP/sampled_users.jsonl"
+AUTHORS_SPLIT_CSV_PATH = "data/SciNUP/authors_split.csv"
 DATASET_JSONL_PATH = "data/SciNUP/dataset.jsonl"
 
 PROFILE_GENERATION_PROMPT_A = (
@@ -95,11 +96,13 @@ def generate_dataset(
 
     candidate_generator = CandidateGenerator(metadata=metadata, citations=citations_df)
     profile_generator = ProfileGenerator()
+    authors_split = pd.read_csv(AUTHORS_SPLIT_CSV_PATH, dtype={"author_id": "string"})
+    author_split_dict = dict(zip(authors_split["author_id"], authors_split["split"]))
 
     logger.info(f"Generating dataset from {len(authors_list)} sampled users.")
     with open(output_json_file, "w") as file:
         for author in tqdm(authors_list, desc="Generating dataset"):
-            author.split = random.randint(0, 3)
+            author.split = author_split_dict.get(author.author_id)
             logger.info(f"Processing user {author.author_id} with split {author.split}")
             model_name = SPLIT_DICT[author.split]["model"]
             profile_prompt = SPLIT_DICT[author.split]["prompt"]

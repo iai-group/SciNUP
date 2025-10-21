@@ -1,7 +1,7 @@
 """Script to rerank retrieval results using Pairwise Relevance Prompting with 
 an LLM.
 
-Run 'python rerank_pipeline.py --help' for usage details and default arguments.
+Run 'python run_llm_reranking.py --help' for usage details and default arguments.
 
 All arguments are optional. It's recommended to specify the following three 
 arguments given in the example usage below:

@@ -40,7 +40,7 @@ After this step, one component of the SciNUP dataset, ground truth items, is cre
 
 Ground truth items are already extracted and stored in the sampling step. Remaining two major components - NL profiles and candidate items set are generated in this step.
 
-
+NL profile generation happens based on [authors_split.csv](authors_split.csv). There are four splits (0, 1, 2, 3) each corresponding to a different prompt-LLM combination for NL profile Generation. 
 
   - input:
     + [data/preprocessed/candidate_users.csv](../preprocessed/)
