@@ -5,7 +5,7 @@ Qin et al. Large Language Models are Effective Text Rankers with Pairwise Rankin
 Prompting, NAACL Findings 2024 (https://aclanthology.org/2024.findings-naacl.97/)
 """
 
-from src.components import file_utils, llm_utils
+from src.components import llm_utils
 from src.models.reranker import Reranker
 from src.models.retriever import RankedList
 

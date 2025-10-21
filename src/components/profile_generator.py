@@ -43,7 +43,6 @@ class ProfileGenerator:
         Args:
             model_name: Model to use.
         """
-        # self._model_name = model_name
         os.environ["OPENROUTER_API_KEY"] = OPENROUTER_API_KEY
 
     def generate_profile(
@@ -82,14 +81,7 @@ class ProfileGenerator:
                 for article in articles
             ]
         )
-        # paper_descriptions = ""
-        # for article in articles:
-        #     try:
-        #         paper_descriptions += (
-        #             f"Title: {article.title}\nAbstract: {article.abstract}\n\n"
-        #         )
-        #     except:
-        #         print(article)
+
         return base_prompt.format(paper_descriptions)
 
     def _query_llm(self, prompt: str, model_name: str) -> str:
@@ -103,7 +95,6 @@ class ProfileGenerator:
         """
 
         response = litellm.completion(
-            # model=self._model_name,
             model=model_name,
             api_key=os.environ["OPENROUTER_API_KEY"],
             api_base="https://openrouter.ai/api/v1",

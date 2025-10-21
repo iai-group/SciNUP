@@ -46,9 +46,7 @@ def call_llm(
     if backend == "ollama":
         try:
             client = Client(host=OLLAMA_HOST)
-            final_prompt = (
-                f"{system_prompt}\n\n{prompt}" if system_prompt else prompt
-            )
+            final_prompt = f"{system_prompt}\n\n{prompt}" if system_prompt else prompt
             response = client.generate(
                 model=model,
                 prompt=final_prompt,
@@ -62,7 +60,6 @@ def call_llm(
         if not api_key:
             raise ValueError("OPENROUTER_API_KEY environment variable not set.")
 
-        # Dynamically build the messages list
         messages = []
         if system_prompt:
             messages.append({"role": "system", "content": system_prompt})
@@ -88,7 +85,5 @@ def call_llm(
 
 def get_last_response_line(response: str) -> str:
     """Extracts the last non-empty line from the LLM response."""
-    lines = [
-        line.strip() for line in response.strip().split("\n") if line.strip()
-    ]
+    lines = [line.strip() for line in response.strip().split("\n") if line.strip()]
     return lines[-1] if lines else ""

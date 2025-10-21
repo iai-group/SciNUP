@@ -5,7 +5,6 @@ import argparse
 import ast
 import json
 import logging
-import random
 import time
 from datetime import datetime
 

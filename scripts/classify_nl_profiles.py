@@ -19,7 +19,7 @@ import argparse
 import json
 import os
 
-from SciNUP.components import file_utils, llm_utils
+from src.components import file_utils, llm_utils
 
 _PROMPT = (
     "You are an expert in classifying scholarly user interest profiles. "
