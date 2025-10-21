@@ -19,7 +19,7 @@ The following methods are benchmarked on the SciNUP dataset:
 
 For BM25, RM3 and kNN-SciBERT, indexes are built before running retrieval.
 
-Before building indexes, [../scripts/articles_to_docs.py](scripts/articles_to_docs.py) is used to format the candidate items sets. Output is saved in [../data/docs/authors](../data/docs/authors), a single JSONL file for each author `{author_id}/docs.jsonl`
+Before building indexes, [../scripts/articles_to_docs.py](../scripts/articles_to_docs.py) is used to format the candidate items sets. Output is saved in [../data/docs/authors](../data/docs/authors), a single JSONL file for each author `{author_id}/docs.jsonl`
 
 
 ## Building indexes
