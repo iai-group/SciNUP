@@ -2,13 +2,13 @@
 
 Four main steps lead to SciNUP dataset:
 
-1. Preprocessing arXiv dataset
-2. Sampling authors
+1. Preprocess arXiv dataset
+2. Sample authors
 3. Dataset generation
 4. Extending dataset
 
 
-## 1. Preprocessing arXiv dataset
+## 1. Preprocess arXiv dataset
 
 [scripts/preprocess_data.py](scripts/preprocess_data.py) is used to preprocess JSON files from [data/raw](../raw/), and save preprocessed data as CSV files.
 
@@ -23,7 +23,7 @@ Four main steps lead to SciNUP dataset:
         - [authors.csv](../preprocessed/) - contains 243,985 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
         - [candidate_users.csv](../preprocessed/) - a subset of [authors.csv](../preprocessed/) with users having >= *n_minimum_papers=5* papers. Contains 90,902 rows with columns: *['author_id', 'authored_paper_ids', 'categories', 'author_name', 'num_papers']* 
 
-## 2. Sampling authors
+## 2. Sample authors
 
   - input:
     + [data/preprocessed/candidate_users.csv](../preprocessed)
