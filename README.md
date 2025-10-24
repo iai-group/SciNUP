@@ -14,9 +14,9 @@ The SciNUP dataset thus serves as a valuable resource for fostering future resea
 
 The SciNUP dataset contains NL profiles of 1000 researchers for scientific literature recommendation with the following components:
 
-- NL profiles and candidate items: Can be downloaded from [here](https://iai.group/downloads/SciNUP/dataset.tgz) and should be placed under [data/SciNUP/dataset.jsonl](data/SciNUP/)
-- Ground truth items: Can be downloaded from [here](https://iai.group/downloads/SciNUP/sampled_users.tgz) and should be placed under [data/SciNUP/sampled_users.jsonl](data/SciNUP/)
-- NL profile breadth categorization: [data/SciNUP/breadth_classification.tsv](data/SciNUP/breadth_classification.tsv)
+- NL profiles and candidate items -  Download [dataset.tgz](https://iai.group/downloads/SciNUP/dataset.tgz) and extract under [data/SciNUP](data/SciNUP/)
+- Ground truth items - Download [sampled_users.tgz](https://iai.group/downloads/SciNUP/sampled_users.tgz) and and extract under [data/SciNUP](data/SciNUP/)
+- NL profile breadth categorization - [data/SciNUP/breadth_classification.tsv](data/SciNUP/breadth_classification.tsv)
 
 | Attribute | SciNUP |
 |-----------|--------|
