@@ -1,0 +1,1 @@
+This folder should contain `authors/` directory containing `{author_id}.jsonl` files with all the candidate items for that author_id. These files are used for indexing and retrieval. Download `authors.tgz` from [here](https://iai.group/downloads/SciNUP/authors.tgz) and extract it under this directoty.
