@@ -16,7 +16,7 @@ The SciNUP dataset contains NL profiles of 1000 researchers for scientific liter
 
 - NL profiles and candidate items -  Download [dataset.tgz](https://iai.group/downloads/SciNUP/dataset.tgz) and extract under [data/SciNUP](data/SciNUP/)
 - Ground truth items - Download [sampled_users.tgz](https://iai.group/downloads/SciNUP/sampled_users.tgz) and and extract under [data/SciNUP](data/SciNUP/)
-- NL profile breadth categorization - [data/SciNUP/breadth_classification.tsv](data/SciNUP/breadth_classification.tsv)
+- NL profile breadth categorization - [breadth_classification.tsv](data/SciNUP/breadth_classification.tsv)
 
 | Attribute | SciNUP |
 |-----------|--------|
