@@ -1,6 +1,6 @@
 # SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation
 
-This repository provides resources developed within the following article [PDF]:
+This repository provides resources developed within the following article [[PDF]](https://arxiv.org/abs/2510.21352):
 
 ## Summary
 
