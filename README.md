@@ -60,7 +60,14 @@ trec_eval -m recall.100 -m map -m recip_rank -m ndcg_cut.10 data/retrieval_resul
 If you use the resources presented in this repository, please cite:
 
 ```
-TBD
+@misc{Arustashvili:2025:arXiv,
+    author =          {Mariam Arustashvili and Krisztian Balog},
+    title =           {SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation}, 
+    year =            {2025},
+    eprint =          {2510.21352},
+    archivePrefix =   {arXiv},
+    primaryClass =    {cs.IR},
+}  
 ```
 
 ## Contact
