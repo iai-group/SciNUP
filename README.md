@@ -31,7 +31,7 @@ Details about dataset creation steps can be found under [data/SciNUP/README.md](
 
 ## Benchmarking
 
-We benchmarked Sparse (BM25, RM3), Dense (kNN-SciBERT, BGE-large, BGE-v2-M3, BGE-v2-MiniCPM) and LLM-reranking (PRP-Llama-3-8B, PRP-Llama-3.3-70B, PRP-GPT-4o-mini) methods on our dataset. Additionally, we evaluated ensemble model using reciprocal rank fusion to fuse best-performing results in each category (RM3, BGE-v2-MiniCPM and PRP-GPT-4o-mini). 
+We benchmarked sparse (BM25, RM3), dense (kNN-SciBERT, BGE-large, BGE-v2-M3, BGE-v2-MiniCPM) and LLM-reranking (PRP-Llama-3-8B, PRP-Llama-3.3-70B, PRP-GPT-4o-mini) methods on our dataset. Additionally, we evaluated ensemble model using reciprocal rank fusion to fuse best-performing results in each category (RM3, BGE-v2-MiniCPM and PRP-GPT-4o-mini). 
 
 
 | Model                  | R@100   | MAP        | MRR        | NDCG@10   | Runfile
