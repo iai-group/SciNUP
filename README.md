@@ -2,6 +2,9 @@
 
 This repository provides resources developed within the following article [[PDF]](https://arxiv.org/abs/2510.21352):
 
+> M. Arustashvili and K. Balog. **SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation.** ArXiv e-prints, October 2025. [https://doi.org/10.48550/arXiv.2510.21352](https://doi.org/10.48550/arXiv.2510.21352)
+
+
 ## Summary
 
 The use of natural language (NL) user profiles in recommender systems offers greater transparency and user control compared to traditional representations. 
