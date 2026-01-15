@@ -58,6 +58,10 @@ The numbers shown in the table above are generated using `trec_eval`:
 trec_eval -m recall.100 -m map -m recip_rank -m ndcg_cut.10 data/retrieval_results/ground_truth_qrels.txt PATH_TO_DESIRED_RUNFILE
 ```
 
+## License
+This repository (code and data) is licensed under the MIT License. 
+Note: The source data comes from arXiv metadata (CC0).
+
 ## Citation
 
 If you use the resources presented in this repository, please cite:
