@@ -2,7 +2,7 @@
 
 This repository provides resources developed within the following article [[PDF]](https://arxiv.org/abs/2510.21352):
 
-> M. Arustashvili and K. Balog. **SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation.** ArXiv e-prints, October 2025. [https://doi.org/10.48550/arXiv.2510.21352](https://doi.org/10.48550/arXiv.2510.21352)
+> M. Arustashvili and K. Balog. **SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation.** In: Proceedings of the 48th European Conference on Information Retrieval (ECIR ’26). Delft, The Netherlands. March 2026.
 
 
 ## Summary
@@ -67,13 +67,12 @@ Note: The source data comes from arXiv metadata (CC0).
 If you use the resources presented in this repository, please cite:
 
 ```
-@misc{Arustashvili:2025:arXiv,
-    author =          {Mariam Arustashvili and Krisztian Balog},
-    title =           {SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation}, 
-    year =            {2025},
-    eprint =          {2510.21352},
-    archivePrefix =   {arXiv},
-    primaryClass =    {cs.IR},
+@inproceedings{Arustashvili:2026:ECIR,
+    author =    {Mariam Arustashvili and Krisztian Balog},
+    title =     {SciNUP: Natural Language User Interest Profiles for Scientific Literature Recommendation},
+    booktitle = {Proceedings of the 48th European Conference on Information Retrieval},
+    series =    {ECIR '26},
+    year =      {2026},
 }  
 ```
 
